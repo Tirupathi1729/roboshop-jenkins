@@ -41,7 +41,7 @@ def call() {
                 }
             }
 
-            stage('App Deploy') {
+            stage('App Deployment') {
                 steps {
                     echo 'Hello World'
                 }
