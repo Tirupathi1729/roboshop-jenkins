@@ -7,7 +7,7 @@
       - { folder_name: "CI-Pipelines"}
       - { folder_name: "Infra-Jobs"}
     mjobs:
-      - { job_name: "cart", repo_name: "https://github.com/Tirupathi1729/cart.git", folder_name: "CI-Pipelines }
+      - { job_name: "cart", repo_name: "https://github.com/Tirupathi1729/cart.git", folder_name: "CI-Pipelines" }
 
     sjobs:
       - { job_name: "roboshop-terraform", repo_name: "https://github.com/Tirupathi1729/roboshop-terraform.git", folder_name: "Infra-Jobs" }
