@@ -1,14 +1,15 @@
 def compile() {
+    if (env.codeType == "python") {
+        return "Return, Do not need compilation"
+    }
     stage ('Compile Code') {
         if (env.codeType == "maven") {
             sh '/home/centos/maven/bin/mvn package'
         }
         if (env.codeType =="nodejs") {
-            print 'NodeJs'
+            print 'npm install'
         }
-        if (env.codeType == "python") {
-            print 'python'
-        }
+
         if (env.codeType == "static") {
             print 'static'
         }
