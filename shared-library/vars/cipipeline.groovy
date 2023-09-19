@@ -16,10 +16,10 @@ def call() {
                 steps {
                     echo 'Hello World'
                     sh 'env'
-                    script {
-                        info 'Starting'
-                        warning 'Nothing to do!'
-                    }
+//                    script {
+//                        info 'Starting'
+//                        warning 'Nothing to do!'
+//                    }
                 }
             }
 
