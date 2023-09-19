@@ -1,29 +1,13 @@
+//def info(message) {
+//    echo "INFO: ${message}"
+//}
+//
+//def warning(message) {
+//    echo "WARNING: ${message}"
+//}
+
+
 def call() {
-    node('workstation') {
-        stage('Compile Code') {
-            common.compile()
-        }
-        stage('Test') {
-            print 'Hello'
-        }
-        stage('Code Quality') {
-            print 'Hello'
-        }
-        stage('Code Security') {
-            print 'Hello'
-        }
-        stage('Release') {
-            print 'Hello'
-        }
-    }
-}
-
-
-
-
-
-
-
     pipeline {
         agent any
 
@@ -32,6 +16,10 @@ def call() {
                 steps {
                     echo 'Hello World'
                     sh 'env'
+//                    script {
+//                        info 'Starting'
+//                        warning 'Nothing to do!'
+//                    }
                 }
             }
 
@@ -82,4 +70,4 @@ def call() {
 
         }
     }
-
+}
