@@ -7,7 +7,7 @@ def compile() {
             sh '/home/centos/maven/bin/mvn package'
         }
         if (env.codeType =="nodejs") {
-            print 'npm install'
+            sh 'npm install'
         }
     }
 
