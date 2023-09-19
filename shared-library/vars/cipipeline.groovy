@@ -1,10 +1,10 @@
-def info(message) {
-    echo "INFO: ${message}"
-}
-
-def warning(message) {
-    echo "WARNING: ${message}"
-}
+//def info(message) {
+//    echo "INFO: ${message}"
+//}
+//
+//def warning(message) {
+//    echo "WARNING: ${message}"
+//}
 
 
 def call() {
@@ -15,6 +15,7 @@ def call() {
             stage('Compile') {
                 steps {
                     echo 'Hello World'
+                    sh 'env'
                     script {
                         info 'Starting'
                         warning 'Nothing to do!'
@@ -36,12 +37,15 @@ def call() {
             }
 
             stage('Code Security') {
+                when {
+                    expression {BRANCH_NAME == "main"}
+                }
                 steps {
                     echo 'Hello World'
                 }
             }
 
-            stage('App Deployment') {
+            stage('Release') {
                 steps {
                     echo 'Hello World'
                 }
